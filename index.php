@@ -45,12 +45,15 @@ $decodedPosts = json_decode($fetchPosts, true);
 			<a class="navbar-brand" href="#">Project name</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			<form class="navbar-form navbar-right">
+			<form class="navbar-form navbar-right" action="http://localhost:8888/api/v1/users/add" method="post">
 				<div class="form-group">
-					<input type="text" placeholder="Email" class="form-control">
+					<input type="text" placeholder="Name" name="name" class="form-control">
 				</div>
 				<div class="form-group">
-					<input type="password" placeholder="Password" class="form-control">
+					<input type="text" placeholder="Email" name="email" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="password" placeholder="Password" name="password" class="form-control">
 				</div>
 				<button type="submit" class="btn btn-success">Sign in</button>
 			</form>
